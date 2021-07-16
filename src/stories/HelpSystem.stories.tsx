@@ -1,22 +1,21 @@
-import React, { useContext } from "react";
 import {
+  Form,
+  FormGroup,
   Page,
   PageHeader,
   PageHeaderTools,
   PageHeaderToolsItem,
   PageSection,
-  FormGroup,
-  Form,
   TextInput,
 } from "@patternfly/react-core";
 import type { Meta } from "@storybook/react";
-
-import { HelpItem } from "../components/help-enabler/HelpItem";
+import React from "react";
 import {
   Help,
-  HelpContext,
   HelpHeader,
+  useHelp,
 } from "../components/help-enabler/HelpHeader";
+import { HelpItem } from "../components/help-enabler/HelpItem";
 
 export default {
   title: "Help System Example",
@@ -56,7 +55,7 @@ export const FormFieldHelp = () => (
 );
 
 const HelpSystemTest = () => {
-  const { enabled } = useContext(HelpContext);
+  const { enabled } = useHelp();
   return (
     <Page
       header={
