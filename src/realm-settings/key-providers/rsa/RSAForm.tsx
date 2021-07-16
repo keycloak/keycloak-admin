@@ -98,7 +98,6 @@ export const RSAForm = ({
   const form = useForm<ComponentRepresentation>({ mode: "onChange" });
 
   const setupForm = (component: ComponentRepresentation) => {
-    console.log(component);
     form.reset();
     Object.entries(component).map(([key, value]) => {
       if (
